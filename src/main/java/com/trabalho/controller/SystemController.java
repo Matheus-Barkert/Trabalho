@@ -31,7 +31,7 @@ public class SystemController {
 	@ApiOperation(value = "Retorna informações do sistema operacional")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Sucesso ao obter informações do sistema operacional") })
 	public ResponseEntity<SOInfo> getSOInfo() {
-		return null;
+		return new ResponseEntity<>(new SOInfo(), HttpStatus.OK);
 	}
 
 }
