@@ -22,7 +22,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket swagger() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("br.com.compasso.DesafioPauta"))
+				.apis(RequestHandlerSelectors.basePackage("com.trabalho.controller"))
 				.paths(PathSelectors.ant("/**")).build().apiInfo(metaInfo());
 
 	}
