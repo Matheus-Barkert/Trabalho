@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@Api(tags = "Informações do sistema")
+@Api(tags = "Sistema")
 @RestController
 @RequestMapping
 public class SystemController {
