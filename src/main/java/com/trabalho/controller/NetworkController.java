@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@Api(tags = "Informações de rede")
+@Api(tags = "Rede")
 @RestController
 @RequestMapping
 public class NetworkController {

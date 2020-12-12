@@ -10,8 +10,11 @@ import com.trabalho.model.MyServer;
 import com.trabalho.service.ServerService;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
-@Api(tags = "Informações do Server")
+@Api(tags = "Server")
 @RestController
 @RequestMapping("/quem")
 public class ServerController {
@@ -23,6 +26,8 @@ public class ServerController {
 	}
 	
 	@GetMapping
+	@ApiOperation(value = "Retorna o nome do servidor")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Sucesso ao obter o nome do servidor") })
 	public ResponseEntity<MyServer> getServerName() {
 		MyServer myServer = serverService.getServerName();
 		return new ResponseEntity<>(myServer, HttpStatus.OK);
