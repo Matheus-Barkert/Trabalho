@@ -1,14 +1,16 @@
 package com.trabalho.model;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Grupo {
 	
-	private String membros;
-	
-	public Grupo() {
-		this.membros = "Matheus Barkert";
-	}
+	private List<Membro> membros;
 
 }
