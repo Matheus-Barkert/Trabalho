@@ -3,6 +3,7 @@ package com.trabalho.service;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.util.Enumeration;
 
 import org.springframework.stereotype.Service;
@@ -19,12 +20,10 @@ public class NetworkService {
 		this.localHost = localHost;
 	}
 
-	public IpAddress getIpAddress() {
+	public IpAddress getIpAddress() throws UnknownHostException {
 		return new IpAddress(localHost.getHostAddress());
 	}
 
-	// FIXME ainda preciso fazer uma implementacao funcional para o mac e revisar o
-	// ip
 	public MacAddress getMacAddress() throws SocketException {
 
 		final Enumeration<NetworkInterface> e = NetworkInterface.getNetworkInterfaces();
